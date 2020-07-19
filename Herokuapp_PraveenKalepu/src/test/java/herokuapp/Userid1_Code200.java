@@ -27,6 +27,7 @@ public void userid1data(){
 	System.out.println("Data is "+data);
 	System.out.println("Response time in milliseconds is "+userid1.getTime());
 	
+	
 	ResponseBody datainBody = userid1.getBody();
 	String bodyValue = datainBody.asString();
 	Assert.assertTrue(bodyValue.contains("Maurise"));
