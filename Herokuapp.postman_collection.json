@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "498ad152-04c7-4e27-9ed8-d4eea508b11d",
+		"name": "Herokuapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "af321763-4617-409d-b4f6-2a7e9bba32e7",
+						"exec": [
+							"//Assert to check status code\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/users",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				},
+				"description": "This test is to retrieve the data of all Users and to pass test by checking status code"
+			},
+			"response": []
+		},
+		{
+			"name": "User id is Alphabit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3cf3e6f8-a004-478d-885a-35c5072de37f",
+						"exec": [
+							"//Assert to check response body contains string\r",
+							"pm.test(\"Response body contains - Id a doesn't exist\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Id a doesn't exist\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/user/a",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"a"
+					]
+				},
+				"description": "This test is to check that no data is retrieved when user id is a aplhabit. Assert used to validate this test is by checking the content of the response body"
+			},
+			"response": []
+		},
+		{
+			"name": "User with id 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a9fb9c3b-a675-4e21-8476-9ef639daf540",
+						"exec": [
+							"//This is to validate schema\r",
+							"var schema =\r",
+							"{\r",
+							"    \"$schema\": \"http://json-schema.org/draft-07/schema\",\r",
+							"    \"$id\": \"http://example.com/example.json\",\r",
+							"    \"type\": \"object\",\r",
+							"    \"title\": \"The root schema\",\r",
+							"    \"description\": \"The root schema comprises the entire JSON document.\",\r",
+							"    \"default\": {},\r",
+							"    \"examples\": [\r",
+							"        {\r",
+							"            \"id\": 1,\r",
+							"            \"first_name\": \"Maurise\",\r",
+							"            \"last_name\": \"Shieldon\",\r",
+							"            \"email\": \"mshieldon0@squidoo.com\",\r",
+							"            \"ip_address\": \"192.57.232.111\",\r",
+							"            \"latitude\": 34.003135,\r",
+							"            \"longitude\": -117.7228641,\r",
+							"            \"city\": \"Kax\"\r",
+							"        }\r",
+							"    ],\r",
+							"    \"required\": [\r",
+							"        \"id\",\r",
+							"        \"first_name\",\r",
+							"        \"last_name\",\r",
+							"        \"email\",\r",
+							"        \"ip_address\",\r",
+							"        \"latitude\",\r",
+							"        \"longitude\",\r",
+							"        \"city\"\r",
+							"    ],\r",
+							"    \"additionalProperties\": true,\r",
+							"    \"properties\": {\r",
+							"        \"id\": {\r",
+							"            \"$id\": \"#/properties/id\",\r",
+							"            \"type\": \"integer\",\r",
+							"            \"title\": \"The id schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": 0,\r",
+							"            \"examples\": [\r",
+							"                1\r",
+							"            ]\r",
+							"        },\r",
+							"        \"first_name\": {\r",
+							"            \"$id\": \"#/properties/first_name\",\r",
+							"            \"type\": \"string\",\r",
+							"            \"title\": \"The first_name schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": \"\",\r",
+							"            \"examples\": [\r",
+							"                \"Maurise\"\r",
+							"            ]\r",
+							"        },\r",
+							"        \"last_name\": {\r",
+							"            \"$id\": \"#/properties/last_name\",\r",
+							"            \"type\": \"string\",\r",
+							"            \"title\": \"The last_name schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": \"\",\r",
+							"            \"examples\": [\r",
+							"                \"Shieldon\"\r",
+							"            ]\r",
+							"        },\r",
+							"        \"email\": {\r",
+							"            \"$id\": \"#/properties/email\",\r",
+							"            \"type\": \"string\",\r",
+							"            \"title\": \"The email schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": \"\",\r",
+							"            \"examples\": [\r",
+							"                \"mshieldon0@squidoo.com\"\r",
+							"            ]\r",
+							"        },\r",
+							"        \"ip_address\": {\r",
+							"            \"$id\": \"#/properties/ip_address\",\r",
+							"            \"type\": \"string\",\r",
+							"            \"title\": \"The ip_address schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": \"\",\r",
+							"            \"examples\": [\r",
+							"                \"192.57.232.111\"\r",
+							"            ]\r",
+							"        },\r",
+							"        \"latitude\": {\r",
+							"            \"$id\": \"#/properties/latitude\",\r",
+							"            \"type\": \"number\",\r",
+							"            \"title\": \"The latitude schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": 0.0,\r",
+							"            \"examples\": [\r",
+							"                34.003135\r",
+							"            ]\r",
+							"        },\r",
+							"        \"longitude\": {\r",
+							"            \"$id\": \"#/properties/longitude\",\r",
+							"            \"type\": \"number\",\r",
+							"            \"title\": \"The longitude schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": 0.0,\r",
+							"            \"examples\": [\r",
+							"                -117.7228641\r",
+							"            ]\r",
+							"        },\r",
+							"        \"city\": {\r",
+							"            \"$id\": \"#/properties/city\",\r",
+							"            \"type\": \"string\",\r",
+							"            \"title\": \"The city schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": \"\",\r",
+							"            \"examples\": [\r",
+							"                \"Kax\"\r",
+							"            ]\r",
+							"        }\r",
+							"    }\r",
+							"}\r",
+							"var json = pm.response.json()\r",
+							"pm.test('Schema is valid', function(){\r",
+							"    pm.expect(tv4.validate(json, schema)).to.be.true;\r",
+							"})\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/user/1",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"1"
+					]
+				},
+				"description": "This will retrieve data of user with id = 1. Validation of this test is by checking the schema "
+			},
+			"response": []
+		},
+		{
+			"name": "Instructions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fc5dd33c-edd8-45c3-8336-c59a28aa6836",
+						"exec": [
+							"//Validate test by checking status code name\r",
+							"pm.test(\"Status code name is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/instructions",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"instructions"
+					]
+				},
+				"description": "This is to retrieve Instructions data. Validation of the test is by checking status code name"
+			},
+			"response": []
+		},
+		{
+			"name": "User with id 1001",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0ee71338-32d2-446d-bca9-6a1cd47d9cc4",
+						"exec": [
+							"//Test validated by checking the data in response body\r",
+							"\r",
+							"pm.test(\"Response body string contains - Id 1001 doesn't exist\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Id 1001 doesn't exist\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/user/1001",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"1001"
+					]
+				},
+				"description": "This is check that user with id 1001 is not found and test validated by checking data in the response body"
+			},
+			"response": []
+		},
+		{
+			"name": "London Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bdc52a80-9269-4aad-99dd-9864b82e3202",
+						"exec": [
+							"//Validate by checking status code\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/city/London/users",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"city",
+						"London",
+						"users"
+					]
+				},
+				"description": "This will retrive the data of all users in London. Test validated by checking the status code"
+			},
+			"response": []
+		},
+		{
+			"name": "New York Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8b83f738-48fd-4019-870f-cad39b4b56d4",
+						"exec": [
+							"//status code is 200 even though no data is retrieved\r",
+							"pm.test(\"Status code is 200 and no data retrieved\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/city/New%20York/users",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"city",
+						"New%20York",
+						"users"
+					]
+				},
+				"description": "This will retrieve no data as there are no users from New York. Validation is done by checking status code. It should be 200 even though no data is retrieved"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
