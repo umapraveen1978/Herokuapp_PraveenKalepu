@@ -1,4 +1,4 @@
-package herojuapp;
+package herokuapp;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -6,25 +6,25 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
+public class Userid1_Code200 {
+Response userid1=RestAssured.get("http://bpdts-test-app-v2.herokuapp.com/user/1");
 
-public class Users {
-	Response users=RestAssured.get("http://bpdts-test-app-v2.herokuapp.com/users");
 //This test is to verify Response Code
 @Test 
-public void statusCodeusers(){
+public void statusCodeuserid1(){
 		
-		int respCode=users.getStatusCode();
+		int respCode=userid1.getStatusCode();
 		System.out.println("Status Code is "+respCode);
 		Assert.assertEquals(respCode, 200);
 	}
 	
 //This test is to get data and check Response Time in Milliseconds
 @Test 
-public void usersdata(){
+public void userid1data(){
 	
-	String data=users.asString();
+	String data=userid1.asString();
 	System.out.println("Data is "+data);
-	System.out.println("Response time in milliseconds is "+users.getTime());
+	System.out.println("Response time in milliseconds is "+userid1.getTime());
 	
 }
 }

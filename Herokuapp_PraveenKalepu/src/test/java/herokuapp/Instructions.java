@@ -1,4 +1,4 @@
-package herojuapp;
+package herokuapp;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
