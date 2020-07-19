@@ -25,5 +25,7 @@ public class Instructions {
 		String data=instructions.asString();
 		System.out.println("Data is "+data);
 		System.out.println("Response time in milliseconds is "+instructions.getTime());
+		
+		
 	}
 	}
