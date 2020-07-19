@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "498ad152-04c7-4e27-9ed8-d4eea508b11d",
+		"name": "Herokuapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/users",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Instructions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/instructions",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"instructions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User with id=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/user/1",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User with id=1001 404 status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/user/1001",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"1001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "London Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/city/London/users",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"city",
+						"London",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New York Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/city/New%20York/users",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"city",
+						"New%20York",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
