@@ -27,5 +27,4 @@ public class NewYork_Nousers {
 			System.out.println("Response time in milliseconds is "+newyorkusers.getTime());
 			
 		}
-
 }

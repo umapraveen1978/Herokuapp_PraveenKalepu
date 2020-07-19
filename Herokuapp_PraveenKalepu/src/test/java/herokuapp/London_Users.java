@@ -27,5 +27,4 @@ public class London_Users {
 		System.out.println("Response time in milliseconds is "+londonusers.getTime());
 		
 	}
-
 }

@@ -26,6 +26,5 @@ public class Userid1001_Code404 {
 		String data=userid1001.asString();
 		System.out.println("Data is "+data);
 		System.out.println("Response time in milliseconds is "+userid1001.getTime());
-		
 	}
 }
