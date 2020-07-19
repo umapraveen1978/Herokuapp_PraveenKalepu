@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30" started-at="2020-07-19T03:32:52Z" finished-at="2020-07-19T03:32:52Z">
+  <suite name="Default suite" duration-ms="47" started-at="2020-07-19T20:52:25Z" finished-at="2020-07-19T20:52:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30" started-at="2020-07-19T03:32:52Z" finished-at="2020-07-19T03:32:52Z">
-      <class name="herojuapp.Instructions">
-        <test-method status="PASS" signature="Instructionsdata()[pri:0, instance:herojuapp.Instructions@13f17eb4]" name="Instructionsdata" duration-ms="17" started-at="2020-07-19T03:32:52Z" finished-at="2020-07-19T03:32:52Z">
-        </test-method> <!-- Instructionsdata -->
-        <test-method status="PASS" signature="statusCodeInstructions()[pri:0, instance:herojuapp.Instructions@13f17eb4]" name="statusCodeInstructions" duration-ms="2" started-at="2020-07-19T03:32:52Z" finished-at="2020-07-19T03:32:52Z">
-        </test-method> <!-- statusCodeInstructions -->
-      </class> <!-- herojuapp.Instructions -->
+    <test name="Default test" duration-ms="47" started-at="2020-07-19T20:52:25Z" finished-at="2020-07-19T20:52:25Z">
+      <class name="herokuapp.Userid1_Code200">
+        <test-method status="PASS" signature="statusCodeuserid1()[pri:0, instance:herokuapp.Userid1_Code200@13f17eb4]" name="statusCodeuserid1" duration-ms="13" started-at="2020-07-19T20:52:25Z" finished-at="2020-07-19T20:52:25Z">
+        </test-method> <!-- statusCodeuserid1 -->
+        <test-method status="PASS" signature="userid1data()[pri:0, instance:herokuapp.Userid1_Code200@13f17eb4]" name="userid1data" duration-ms="18" started-at="2020-07-19T20:52:25Z" finished-at="2020-07-19T20:52:25Z">
+        </test-method> <!-- userid1data -->
+      </class> <!-- herokuapp.Userid1_Code200 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

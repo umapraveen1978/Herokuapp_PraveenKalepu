@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)" preserve-order="true">
     <classes>
-      <class name="herojuapp.Userid1001_Code404">
+      <class name="herokuapp.Userid1_Code200">
         <methods>
-          <include name="statusCodeuserid1001fail"/>
+          <include name="userid1data"/>
         </methods>
-      </class> <!-- herojuapp.Userid1001_Code404 -->
+      </class> <!-- herokuapp.Userid1_Code200 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
